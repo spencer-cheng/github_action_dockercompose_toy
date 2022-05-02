@@ -9,5 +9,5 @@ jobs:
       - name: start the app
         run: docker-compose up -d
       - name: test
-        run: docker run --network host appropriate/curl -s --retry 10 --retry-connrefused http://localhost:8000
+        run: docker run --network container:frontend appropriate/curl -s --retry 10 --retry-connrefused frontend:5000
 
